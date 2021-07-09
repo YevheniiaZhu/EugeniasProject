@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 class ListMovie extends React.Component {
   render() {
