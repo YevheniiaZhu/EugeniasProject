@@ -1,0 +1,56 @@
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 64px;
+    position: relative;
+}
+
+.wallpaper {
+    position: absolute;
+    z-index: -1;
+}
+
+.cat {
+    position: absolute;
+    width: 50%;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+}
+
+.wrapper button {
+    width: 260px;
+    height: 66px;
+    background: rgba(151, 193, 84, 1);
+    border-radius: 68px;
+    font-size: 36px;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+}
+
+.buttonLink {
+    text-decoration: none;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 115px 50px 0 0;
+}
+
+.button {
+    margin-right: 90px;
+}
+
+.wrapper h1 {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 85px 0 0;
+    font-size: 64px;
+    color: rgba(215, 187, 152, 1);
+    margin: 50px 0 462px 0;
+}
