@@ -5,6 +5,7 @@ import renderRoutes from './routes';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import movieAndTvReducer from './store/reducers/index';
+import './App.css';
 
 const middleware = [thunk];
 
