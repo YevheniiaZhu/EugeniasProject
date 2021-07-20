@@ -7,10 +7,10 @@ import Slogan from '../../components/mainPage/Slogan';
 class Main extends React.Component {
     render() {
         return (
-            <div className='wrapper'>
-                <Wallpaper/>
-                <Buttons/>
-                <Slogan/>
+            <div className="wrapper">
+                <Wallpaper />
+                <Buttons />
+                <Slogan />
             </div>
         );
     }

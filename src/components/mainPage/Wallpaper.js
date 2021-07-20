@@ -8,8 +8,8 @@ class Wallpaper extends React.Component {
     render() {
         return (
             <div>
-                <img className='wallpaper' src={wallpaper} alt='wallpaper'/>
-                <img className='cat' src={cat} alt='cat'/>
+                <img className="wallpaper" src={wallpaper} alt="wallpaper"/>
+                <img className="cat" src={cat} alt="cat"/>
             </div>
         );
     }
