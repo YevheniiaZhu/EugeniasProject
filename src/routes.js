@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Main from './pages/main/Main';
-import ListMovie from './pages/listMovie/ListMovie';
-import ListTvShow from './pages/listTvShow/ListTvShow';
+import ListMovie from './pages/listMovie';
+import ListTvShow from './pages/listTvShow';
 
 export default function renderRoutes() {
   return (
