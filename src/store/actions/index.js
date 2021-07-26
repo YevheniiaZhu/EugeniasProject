@@ -19,11 +19,12 @@ export function getListMovies() {
     }
 }
 
+
 export function getListTvShows() {
     return async (dispatch) => {
         const listTvShows = await (await fetch(LIST_TV_SHOWS_API_URL)).json();
 
-        dispatch ({
+        dispatch({
             type: GET_LIST_TV_SHOWS,
             playload: {
                 listTvShows
