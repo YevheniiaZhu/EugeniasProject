@@ -4,14 +4,14 @@ import ListTvShow from './ListTvShow';
 import _get from 'lodash.get';
 
 
-const mapStateToProps = (state) => ({
-   //updatedListTvShow: _get(state, 'listTvShows.results', [])
+const mapStateToProps = ( state ) => ({
+    updatedListTvShow: _get(state, 'listTvShows.results', [])
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = ( dispatch ) => ({
     getUpdatedListTvShow: () => {
-        dispatch(moviesAndTvActions.getListTvShows())
-    }
+        dispatch(moviesAndTvActions.getListTvShows());
+    },
 });
 
 export default connect(

@@ -17,7 +17,7 @@ export default (state = defaultState, action) => {
         case moviesAndTvActions.GET_LIST_TV_SHOWS:
             return {
                 ...state,
-                ...action.payload,
+                ...action.playload,
             }
 
         default:
