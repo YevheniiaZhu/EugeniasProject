@@ -17,6 +17,7 @@ class ListTvShow extends React.Component {
                 <h1>Сериалы</h1>
                 {updatedListTvShow.map(item =>
                     <Card
+                        key={item.id}
                         title={item.name}
                         image={posterIMG + item.poster_path}
                         description={item.first_air_date}
