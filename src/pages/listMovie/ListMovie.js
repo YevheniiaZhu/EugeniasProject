@@ -1,71 +1,6 @@
 import React from 'react';
-import Card from '../../components/Card/Card';
+import Card from '../../components/card/Card';
 import './listMovie.css';
-
-
-const listMovieCard = [
-    {
-        title: "List Movie Title",
-        image: "https://media.istockphoto.com/vectors/cinema-and-movie-time-vector-id640312764",
-        description: "List Movie Description"
-    },
-    {
-        title: "List Movie Title1",
-        image: "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24211921.jpg",
-        description: "List Movie Description1 List Movie Description1"
-    },
-    {
-        title: "List Movie Title1",
-        image: "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24211921.jpg",
-        description: "List Movie Description1"
-    },
-    {
-        title: "List Movie Title1",
-        image: "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24211921.jpg",
-        description: "List Movie Description1"
-    },
-    {
-        title: "List Movie Title1",
-        image: "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24211921.jpg",
-        description: "List Movie Description1"
-    },
-    {
-        title: "List Movie Title1",
-        image: "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24211921.jpg",
-        description: "List Movie Description1"
-    },
-    {
-        title: "List Movie Title1",
-        image: "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24211921.jpg",
-        description: "List Movie Description1"
-    },
-    {
-        title: "List Movie Title1",
-        image: "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24211921.jpg",
-        description: "List Movie Description1"
-    },
-    {
-        title: "List Movie Title1",
-        image: "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24211921.jpg",
-        description: "List Movie Description1 "
-    },
-    {
-        title: "List Movie Title1",
-        image: "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24211921.jpg",
-        description: "List Movie Description1"
-    },
-    {
-        title: "List Movie Title1",
-        image: "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24211921.jpg",
-        description: "List Movie Description1"
-    },
-    {
-        title: "List Movie Title1",
-        image: "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24211921.jpg",
-        description: "List Movie Description1"
-    },
-
-]
 
 class ListMovie extends React.Component {
 
@@ -74,18 +9,20 @@ class ListMovie extends React.Component {
     }
 
     render() {
+        const { updatedListMovie } = this.props;
+        const posterIMG = 'https://image.tmdb.org/t/p/w500';
         return (
             <div className="listMovieContainer">
-                <h1>List Movie</h1>
-                {listMovieCard.map(item =>
+                <h1>Фильмы</h1>
+                {updatedListMovie.map(item =>
                     <Card
+                        key={item.id}
                         title={item.title}
-                        image={item.image}
-                        description={item.description}
+                        image={posterIMG + item.poster_path}
+                        description={item.release_date}
                     />
                 )}
             </div>
-
         );
     }
 }

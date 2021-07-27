@@ -1,11 +1,13 @@
 .cardWrapper {
     display: inline-block;
     width: 177px;
+    height: 382px;
     margin: 0 8px 20px 8px;
     background: rgba(151, 193, 84, 1);
     border: double;
     border-radius: 5px;
     color: white;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
 }
 
 .cardContent {

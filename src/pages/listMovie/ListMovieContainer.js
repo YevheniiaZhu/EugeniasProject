@@ -5,7 +5,7 @@ import _get from 'lodash.get';
 
 
 const mapStateToProps = (state) => ({
-   //updatedListMovie: _get(state, 'listMovies.results', [])
+    updatedListMovie: _get(state, 'listMovies.results', [])
 });
 
 const mapDispatchToProps = (dispatch) => ({

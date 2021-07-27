@@ -26,7 +26,7 @@ export function getListTvShows() {
 
         dispatch({
             type: GET_LIST_TV_SHOWS,
-            playload: {
+            payload: {
                 listTvShows
             }
         });
