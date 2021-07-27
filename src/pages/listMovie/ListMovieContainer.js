@@ -4,11 +4,11 @@ import ListMovie from './ListMovie';
 import _get from 'lodash.get';
 
 
-const mapStateToProps = ( state ) => ({
+const mapStateToProps = (state) => ({
     updatedListMovie: _get(state, 'listMovies.results', [])
 });
 
-const mapDispatchToProps = ( dispatch ) => ({
+const mapDispatchToProps = (dispatch) => ({
     getUpdatedListMovie: () => {
         dispatch(moviesAndTvActions.getListMovies());
     },

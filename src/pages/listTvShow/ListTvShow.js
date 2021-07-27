@@ -9,7 +9,6 @@ class ListTvShow extends React.Component {
     }
 
     render() {
-        console.log(this.props);
         const { updatedListTvShow } = this.props;
         const posterIMG = 'https://image.tmdb.org/t/p/w500';
         return (

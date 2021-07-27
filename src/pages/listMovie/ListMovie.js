@@ -9,7 +9,6 @@ class ListMovie extends React.Component {
     }
 
     render() {
-        console.log(this.props);
         const { updatedListMovie } = this.props;
         const posterIMG = 'https://image.tmdb.org/t/p/w500';
         return (
