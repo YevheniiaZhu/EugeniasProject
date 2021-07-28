@@ -6,7 +6,6 @@ import ListTvShow from './pages/listTvShow';
 import MovieDetails from './pages/movieDetails';
 import TvShowDetails from './pages/tvShowDetails';
 
-
 export default function renderRoutes() {
     return (
         <Switch>
