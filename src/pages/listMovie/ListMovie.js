@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../../components/card/Card';
 import './listMovie.css';
+import { Link } from 'react-router-dom';
 
 class ListMovie extends React.Component {
 
@@ -15,12 +16,13 @@ class ListMovie extends React.Component {
             <div className="listMovieContainer">
                 <h1>Фильмы</h1>
                 {updatedListMovie.map(item =>
-                    <Card
-                        key={item.id}
-                        title={item.title}
-                        image={posterIMG + item.poster_path}
-                        description={item.release_date}
-                    />
+                    <Link to={'/movies/${item.id}'} key={item.id}>
+                        <Card
+                            title={item.title}
+                            image={posterIMG + item.poster_path}
+                            description={item.release_date}
+                        />
+                    </Link>
                 )}
             </div>
         );
