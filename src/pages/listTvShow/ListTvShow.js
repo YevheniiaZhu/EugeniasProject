@@ -16,9 +16,8 @@ class ListTvShow extends React.Component {
             <div className="listTvShowContainer">
                 <h1>Сериалы</h1>
                 {updatedListTvShow.map(item =>
-                    <Link to={'/tv-shows/${item.id}'}>
+                    <Link to={'/tv-shows/${item.id}'} key={item.id}>
                         <Card
-                            key={item.id}
                             title={item.name}
                             image={posterIMG + item.poster_path}
                             description={item.first_air_date}

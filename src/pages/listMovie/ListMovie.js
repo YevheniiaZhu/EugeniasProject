@@ -16,9 +16,8 @@ class ListMovie extends React.Component {
             <div className="listMovieContainer">
                 <h1>Фильмы</h1>
                 {updatedListMovie.map(item =>
-                    <Link to={'/movies/${item.id}'}>
+                    <Link to={'/movies/${item.id}'} key={item.id}>
                     <Card
-                        key={item.id}
                         title={item.title}
                         image={posterIMG + item.poster_path}
                         description={item.release_date}
