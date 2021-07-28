@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../../components/card/Card';
 import './listTvShow.css';
+import { Link } from 'react-router-dom';
 
 class ListTvShow extends React.Component {
 
@@ -15,12 +16,14 @@ class ListTvShow extends React.Component {
             <div className="listTvShowContainer">
                 <h1>Сериалы</h1>
                 {updatedListTvShow.map(item =>
-                    <Card
-                        key={item.id}
-                        title={item.name}
-                        image={posterIMG + item.poster_path}
-                        description={item.first_air_date}
-                    />
+                    <Link to={'/tv-shows/${item.id}'}>
+                        <Card
+                            key={item.id}
+                            title={item.name}
+                            image={posterIMG + item.poster_path}
+                            description={item.first_air_date}
+                        />
+                    </Link>
                 )}
             </div>
         );
