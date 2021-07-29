@@ -18,8 +18,17 @@ export default (state = defaultState, action) => {
             return {
                 ...state,
                 ...action.payload,
+            };
+        case moviesAndTvActions.GET_MOVIE_BY_ID:
+            return {
+                ...state,
+                ...action.payload,
             }
-
+        case moviesAndTvActions.GET_TV_SHOW_BY_ID:
+            return {
+                ...state,
+                ...action.payload,
+            }
         default:
             return state;
     }

@@ -1,0 +1,27 @@
+.detailsWrapper {
+    display: flex;
+    padding: 30px;
+    background: rgba(151, 193, 84, 1);
+    color: #ffffff;
+    height: 100vh;
+}
+
+.detailsWrapper img {
+    background: #ffffff;
+    border-width: 0px;
+    border-radius: 5px;
+    min-width: 300px;
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    padding: 30px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+}
+
+.detailsContent {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-left: 40px;
+    flex-direction: column;
+}
