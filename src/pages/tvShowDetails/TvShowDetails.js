@@ -1,4 +1,5 @@
 import React from 'react';
+import './tvShowDetails.css'
 
 class TvShowDetails extends React.Component {
 
