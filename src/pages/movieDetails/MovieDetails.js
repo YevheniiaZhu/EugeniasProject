@@ -15,7 +15,8 @@ class MovieDetails extends React.Component {
             <div className="detailsWrapper">
                 <img
                     src={posterIMG + movieByIdDetails.poster_path}
-                    alt=""/>
+                    alt=""
+                />
                 <div className="detailsContent">
                     <h1>{movieByIdDetails.title}</h1>
                     <p>Дата релиза: {movieByIdDetails.release_date}</p>

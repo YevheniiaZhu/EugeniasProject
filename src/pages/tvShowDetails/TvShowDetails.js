@@ -15,7 +15,8 @@ class TvShowDetails extends React.Component {
             <div className="detailsWrapper">
                 <img
                     src={posterIMG + tvShowByIdDetails.poster_path}
-                    alt="" />
+                    alt=""
+                />
                 <div className="detailsContent">
                     <h1>{tvShowByIdDetails.name}</h1>
                     <p>Дата релиза: {tvShowByIdDetails.first_air_date}</p>
