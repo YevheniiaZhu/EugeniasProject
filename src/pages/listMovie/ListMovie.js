@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../../components/card/Card';
 import './listMovie.css';
 import { Link } from 'react-router-dom';
+import FiltersBlock from '../../components/filtersBlock';
 
 class ListMovie extends React.Component {
 
@@ -14,7 +15,10 @@ class ListMovie extends React.Component {
         const posterIMG = 'https://image.tmdb.org/t/p/w500';
         return (
             <div className="listMovieContainer">
-                <h1>Фильмы</h1>
+                <div className="listMovieHeader">
+                    <h1>Фильмы</h1>
+                    <FiltersBlock />
+                </div>
                 {updatedListMovie.map(item =>
                     <Link to={`/movies/${item.id}`} key={item.id}>
                         <Card

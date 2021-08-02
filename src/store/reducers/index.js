@@ -29,6 +29,36 @@ export default (state = defaultState, action) => {
                 ...state,
                 ...action.payload,
             }
+        case moviesAndTvActions.GET_LIST_POPULAR_MOVIES:
+            return {
+                ...state,
+                ...action.payload,
+            }
+        case moviesAndTvActions.GET_LIST_POPULAR_TV_SHOWS:
+            return {
+                ...state,
+                ...action.payload,
+            }
+        case moviesAndTvActions.GET_LIST_TOP_RATED_MOVIES:
+            return {
+                ...state,
+                ...action.payload,
+            }
+        case moviesAndTvActions.GET_LIST_TOP_RATED_TV_SHOWS:
+            return {
+                ...state,
+                ...action.payload,
+            }
+        case moviesAndTvActions.GET_LIST_NOW_PLAYING_MOVIES:
+            return {
+                ...state,
+                ...action.payload,
+            }
+        case moviesAndTvActions.GET_LIST_NOW_PLAYING_TV_SHOWS:
+            return {
+                ...state,
+                ...action.payload,
+            }
         default:
             return state;
     }

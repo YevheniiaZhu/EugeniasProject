@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../../components/card/Card';
 import './listTvShow.css';
 import { Link } from 'react-router-dom';
+import FiltersBlock from '../../components/filtersBlock';
 
 class ListTvShow extends React.Component {
 
@@ -14,7 +15,10 @@ class ListTvShow extends React.Component {
         const posterIMG = 'https://image.tmdb.org/t/p/w500';
         return (
             <div className="listTvShowContainer">
-                <h1>Сериалы</h1>
+                <div className="listTvShowHeader">
+                    <h1>Сериалы</h1>
+                    <FiltersBlock />
+                </div>
                 {updatedListTvShow.map(item =>
                     <Link to={`/tv-shows/${item.id}`} key={item.id}>
                         <Card
@@ -25,6 +29,7 @@ class ListTvShow extends React.Component {
                     </Link>
                 )}
             </div>
+
         );
     }
 }

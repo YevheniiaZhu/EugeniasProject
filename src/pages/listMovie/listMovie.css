@@ -1,6 +1,12 @@
 .listMovieContainer {
     padding: 10px;
+}
 
+.listMovieHeader {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
 }
 
 .listMovieContainer h1 {
