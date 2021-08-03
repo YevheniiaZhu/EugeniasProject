@@ -9,8 +9,10 @@ class FiltersBlock extends React.Component {
             <div className="filtersBlockContainer">
                 <div className="filtersBlockSelect">
                     <label>Сортировать: </label>
-                    <select className="filtersBlockCheckbox"
-                            onChange={(e) => handleFilterChange(e.target.value)}>
+                    <select
+                        className="filtersBlockCheckbox"
+                        onChange={(e) => handleFilterChange(e.target.value)}
+                    >
                         <option value="popular">Популярные</option>
                         <option value="topRated">С наивысшим рейтингом</option>
                         <option value="nowPlaying">Сейчас смотрят</option>
@@ -22,8 +24,8 @@ class FiltersBlock extends React.Component {
                         type="search"
                         id="search"
                         name="search"
-                        placeholder="Поиск">
-                    </input>
+                        placeholder="Поиск"
+                    />
                 </div>
             </div>
         )
