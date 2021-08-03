@@ -10,6 +10,25 @@ class ListTvShow extends React.Component {
         this.props.getUpdatedListTvShow();
     }
 
+        handleFilterChange = (value) => {
+            switch (value) {
+                case 'popular':
+                    this.props.getListPopularTvShows();
+                    break;
+                case 'topRated':
+                    this.props.getListTopRatedTvShows();
+                    break;
+                case 'nowPlaying':
+                    this.props.getListNowPlayingTvShows();
+                    break;
+            }
+        }
+
+    handleSearch = (query) => {
+        this.props.searchTvShow(query);
+    }
+
+
     render() {
         const { updatedListTvShow } = this.props;
         const posterIMG = 'https://image.tmdb.org/t/p/w500';
@@ -17,7 +36,10 @@ class ListTvShow extends React.Component {
             <div className="listTvShowContainer">
                 <div className="listTvShowHeader">
                     <h1>Сериалы</h1>
-                    <FiltersBlock />
+                    <FiltersBlock
+                        handleFilterChange={this.handleFilterChange}
+                        handleSearch={this.handleSearch}
+                    />
                 </div>
                 {updatedListTvShow.map(item =>
                     <Link to={`/tv-shows/${item.id}`} key={item.id}>

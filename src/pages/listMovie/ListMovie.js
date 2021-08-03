@@ -10,6 +10,24 @@ class ListMovie extends React.Component {
         this.props.getUpdatedListMovie();
     }
 
+    handleFilterChange = (value) => {
+        switch (value) {
+            case 'popular':
+                this.props.getListPopularMovies();
+                break;
+            case 'topRated':
+                this.props.getListTopRatedMovies();
+                break;
+            case 'nowPlaying':
+                this.props.getListNowPlayingMovies();
+                break;
+        }
+    }
+
+    handleSearch = (query) => {
+        this.props.searchMovie(query);
+    }
+
     render() {
         const { updatedListMovie } = this.props;
         const posterIMG = 'https://image.tmdb.org/t/p/w500';
@@ -17,7 +35,10 @@ class ListMovie extends React.Component {
             <div className="listMovieContainer">
                 <div className="listMovieHeader">
                     <h1>Фильмы</h1>
-                    <FiltersBlock />
+                    <FiltersBlock
+                        handleFilterChange={this.handleFilterChange}
+                        handleSearch={this.handleSearch}
+                    />
                 </div>
                 {updatedListMovie.map(item =>
                     <Link to={`/movies/${item.id}`} key={item.id}>
