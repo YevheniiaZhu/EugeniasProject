@@ -10,7 +10,8 @@ export const GET_LIST_TOP_RATED_MOVIES = 'LIST_TOP_RATED_MOVIES';
 export const GET_LIST_TOP_RATED_TV_SHOWS = 'LIST_TOP_RATED_TV_SHOWS';
 export const GET_LIST_NOW_PLAYING_MOVIES = 'LIST_NOW_PLAYING_MOVIES';
 export const GET_LIST_NOW_PLAYING_TV_SHOWS = 'LIST_NOW_PLAYING_TV_SHOWS';
-
+export const SEARCH_MOVIE = 'SEARCH_MOVIE';
+export const SEARCH_TV_SHOW = 'SEARCH_TV_SHOW';
 
 const LIST_MOVIES_API_URL = 'https://api.themoviedb.org/3/discover/movie?api_key=a2179cc6dc943669490ac581598b5f8b&language=ru-RU';
 const LIST_TV_SHOWS_API_URL = 'https://api.themoviedb.org/3/discover/tv?api_key=a2179cc6dc943669490ac581598b5f8b&language=ru-RU';
@@ -150,5 +151,33 @@ export function getListNowPlayingTvShows() {
                 listTvShows
             }
         });
+    }
+}
+
+export function searchMovie(query) {
+    return async (dispatch) => {
+        const SEARCH_MOVIE_API_URL = `https://api.themoviedb.org/3/search/movie?api_key=a2179cc6dc943669490ac581598b5f8b&language=ru-RU&page=1&query=${query}&include_adult=false`;
+        const listMovies = await (await fetch(SEARCH_MOVIE_API_URL)).json();
+
+        dispatch({
+            type: SEARCH_MOVIE,
+            payload: {
+                listMovies
+            }
+        });
+    }
+}
+
+export function searchTvShow(query) {
+    return async (dispatch) => {
+        const SEARCH_TV_SHOW_API_URL = `https://api.themoviedb.org/3/search/tv?api_key=a2179cc6dc943669490ac581598b5f8b&language=ru-RU&page=1&query=${query}&include_adult=false`;
+        const listTvShows = await (await fetch(SEARCH_TV_SHOW_API_URL)).json();
+
+        dispatch({
+            type: SEARCH_TV_SHOW,
+            payload: {
+                listTvShows
+            }
+        })
     }
 }

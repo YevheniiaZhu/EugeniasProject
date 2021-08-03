@@ -59,6 +59,16 @@ export default (state = defaultState, action) => {
                 ...state,
                 ...action.payload,
             }
+        case moviesAndTvActions.SEARCH_MOVIE:
+            return {
+                ...state,
+                ...action.payload,
+            }
+        case moviesAndTvActions.SEARCH_TV_SHOW:
+            return {
+                ...state,
+                ...action.payload,
+            }
         default:
             return state;
     }
