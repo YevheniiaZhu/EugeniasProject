@@ -61,7 +61,6 @@ class ListTvShow extends React.Component {
                             title={item.name}
                             image={posterIMG + item.poster_path}
                             description={item.first_air_date}
-                            description={item.release_date}
                             isLightTheme={lightTheme}
                         />
                     </Link>
