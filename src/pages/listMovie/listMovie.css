@@ -2,13 +2,42 @@
     padding: 10px;
 }
 
+.listMovieContainerDark {
+    background-color: black;
+    color: #ffffff;
+    padding: 10px;
+}
+
 .listMovieHeader {
     display: flex;
     justify-content: space-between;
     align-content: center;
     align-items: center;
+    padding: 0 10px;
 }
 
 .listMovieContainer h1 {
     margin-left: 20px;
 }
+
+.listMovieContainerDark h1 {
+    margin-left: 20px;
+}
+
+.listMovieTheme {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    margin: 20px;
+}
+
+.listMovieTheme input {
+    margin-left: 10px;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+

@@ -1,9 +1,9 @@
 import React from 'react';
 import './card.css'
 
-const Card = ({ title, image, description }) => {
+const Card = ({ title, image, description, isLightTheme }) => {
     return (
-        <div className="cardWrapper">
+        <div className={isLightTheme ? "cardWrapper" : "cardWrapperDark"} >
             <img src={image} />
             <div className="cardContent">
                 <h2>{title}</h2>
