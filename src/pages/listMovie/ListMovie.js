@@ -6,8 +6,18 @@ import FiltersBlock from '../../components/filtersBlock';
 
 class ListMovie extends React.Component {
 
+    state = {
+        lightTheme: true
+    };
+
     componentDidMount() {
         this.props.getUpdatedListMovie();
+    }
+
+    handleClick = () => {
+        this.setState(state => ({
+            lightTheme: !state.lightTheme
+        }));
     }
 
     handleFilterChange = (value) => {
@@ -30,25 +40,32 @@ class ListMovie extends React.Component {
 
     render() {
         const { updatedListMovie } = this.props;
+        const { lightTheme } = this.state;
         const posterIMG = 'https://image.tmdb.org/t/p/w500';
         return (
-            <div className="listMovieContainer">
+            <div className={lightTheme ? "listMovieContainer" : "listMovieContainerDark"}>
                 <div className="listMovieHeader">
                     <h1>Фильмы</h1>
                     <FiltersBlock
                         handleFilterChange={this.handleFilterChange}
                         handleSearch={this.handleSearch}
+                        isLightTheme={lightTheme}
+                        handleClick={this.handleClick}
                     />
                 </div>
-                {updatedListMovie.map(item =>
-                    <Link to={`/movies/${item.id}`} key={item.id}>
-                        <Card
-                            title={item.title}
-                            image={posterIMG + item.poster_path}
-                            description={item.release_date}
-                        />
-                    </Link>
-                )}
+                <div className="cardContainer">
+                    {updatedListMovie.map(item =>
+                        <Link to={`/movies/${item.id}`} key={item.id}>
+                            <Card
+                                style={item.background}
+                                title={item.title}
+                                image={posterIMG + item.poster_path}
+                                description={item.release_date}
+                                isLightTheme={lightTheme}
+                            />
+                        </Link>
+                    )}
+                </div>
             </div>
         );
     }

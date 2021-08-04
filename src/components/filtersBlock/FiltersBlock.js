@@ -1,9 +1,11 @@
 import React from 'react';
 import './filtersBlock.css';
+import moon from '../../assets/img/icon-moon.png';
+import sun from '../../assets/img/icon-sun.png';
 
 class FiltersBlock extends React.Component {
     render() {
-        const { handleFilterChange, handleSearch } = this.props;
+        const { handleFilterChange, handleSearch, isLightTheme, handleClick }  = this.props;
 
         return (
             <div className="filtersBlockContainer">
@@ -27,9 +29,18 @@ class FiltersBlock extends React.Component {
                         placeholder="Поиск"
                     />
                 </div>
+                <div className="listMovieTheme">
+                <input
+                    onClick={() => handleClick()}
+                    type="image"
+                    src={isLightTheme ? moon : sun}
+                    alt=""
+                />
+                </div>
             </div>
         )
     }
 }
 
 export default FiltersBlock;
+
